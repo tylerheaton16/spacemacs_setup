@@ -31,13 +31,13 @@ fi
 ###############################################################
 # Create .bashrc symlink. If already exists, backup and replace
 ###############################################################
-#if [ -e $HOME/.bashrc ]
-#then 
-#    mv $HOME/.bashrc $HOME/$BACKUP/.bashrc_bak
-#    ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
-#else
-#    ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
-#fi
+if [ -e $HOME/.bashrc ]
+then 
+    mv $HOME/.bashrc $HOME/$BACKUP/.bashrc_bak
+    ln -s $HOME/spacemacs_setup/.bashrc $HOME/.bashrc
+else
+    ln -s $HOME/spacemacs_setup/.bashrc $HOME/.bashrc
+fi
 ###################################################################
 # Create .dir_colors symlink. If already exists, backup and replace
 ###################################################################
