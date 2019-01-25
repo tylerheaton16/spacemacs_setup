@@ -11,9 +11,9 @@ echo "If being used to configure a personal laptop"
 echo " " 
 
 # Create backup directory to store all old dotfiles if they exist
-if [ ! -d $HOME/dotfiles_backup ]
+if [ ! -d $HOME/tylers_backup ]
 then 
- mkdir $HOME/dotfiles_backup
+ mkdir $HOME/tylers_backup
 fi
 
 BACKUP="tylers_backup"
