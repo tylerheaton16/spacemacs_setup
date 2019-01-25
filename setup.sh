@@ -114,6 +114,13 @@ then
     ln -s $HOME/spacemacs_setup/.Xresources_urxvt $HOME/.Xresources
     xrdb $HOME/.Xresources
 fi
+
 ##################################################################
 #Create URxvt/Xterm Color Files for 256 ##########################
 ##################################################################
+if [ ! -d $HOME/.terminfo ]
+then 
+    cp -R $HOME/spacemacs_setup/.terminfo $HOME
+fi
+
+
