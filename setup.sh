@@ -107,43 +107,13 @@ fi
 
 if [ $term_config -eq '1' ]
 then
-    ln -s $HOME/dotfiles/.Xresources_xterm $HOME/.Xresources
+    ln -s $HOME/spacemacs_setup/.Xresources_xterm $HOME/.Xresources
     xrdb $HOME/.Xresources
 elif [ $term_config -eq '2' ] 
 then
-    ln -s $HOME/dotfiles/.Xresources_urxvt $HOME/.Xresources
+    ln -s $HOME/spacemacs_setup/.Xresources_urxvt $HOME/.Xresources
     xrdb $HOME/.Xresources
 fi
-
-
-##################################################################
-# Create .elisp file to hold verilog-auto.el file   
-##################################################################
-if [ -e $HOME/.elisp ]
-then 
-    mv $HOME/.elisp $HOME/$BACKUP/.elisp_bak
-    ln -s $HOME/dotfiles/.elisr $HOME/.elisp
-else
-    ln -s $HOME/dotfiles/.elisp $HOME/.elisp
-fi
-
-##################################################################
-#Install Vundle Plugin if not installed ##########################
-##################################################################
-if [ ! -d $HOME/.vim/bundle ]
-then 
- git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
- echo "Vundle not Detected. Installing"
- echo " "
-fi
-
-
 ##################################################################
 #Create URxvt/Xterm Color Files for 256 ##########################
 ##################################################################
-if [ ! -d $HOME/.terminfo ]
-then 
-    cp -R $HOME/dotfiles/.terminfo $HOME
-fi
-
-
