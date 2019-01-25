@@ -1,3 +1,0 @@
-[submodule "emacs_source/emacs"]
-	path = emacs_source/emacs
-	url = https://github.com/tylerheaton16/spacemacs_setup
