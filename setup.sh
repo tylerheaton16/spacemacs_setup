@@ -41,13 +41,13 @@ fi
 ###################################################################
 # Create .dir_colors symlink. If already exists, backup and replace
 ###################################################################
-if [ -e $HOME/.dir_colors ]
-then 
-    mv $HOME/.dir_colors $HOME/$BACKUP/.dir_colors_bak
-    ln -s $HOME/spacemacs_setup/.dir_colors $HOME/.dir_colors
-else
-    ln -s $HOME/spacemacs_setup/.dir_colors $HOME/.dir_colors
-fi
+#if [ -e $HOME/.dir_colors ]
+#then 
+#    mv $HOME/.dir_colors $HOME/$BACKUP/.dir_colors_bak
+#    ln -s $HOME/spacemacs_setup/.dir_colors $HOME/.dir_colors
+#else
+#    ln -s $HOME/spacemacs_setup/.dir_colors $HOME/.dir_colors
+#fi
 ################################################################################
 # Do not set .fehbg as symlink. Sourcing .sh overwrites relative paths (feh bug) 
 #If already exists, backup and replace
