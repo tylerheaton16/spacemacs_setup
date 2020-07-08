@@ -126,7 +126,12 @@ google() {
 	done
 	xdg-open "http://www.google.com/search?q=$search"
 }
-echo '"**Look in "helpful_commands" as a reference to helpful commands documented**"'
-eval $(dircolors ~/.dir_colors)
+#echo '"**Look in "helpful_commands" as a reference to helpful commands documented**"'
+#eval $(dircolors ~/.dir_colors)
 #added for spacemacs_setup .bashrc
-export PATH=$HOME/spacemacs_setup/.local/bin:$PATH
+alias "vi=vim"
+export FASTX3=$HOME/.local/FastX3
+export PATH=$FASTX3:$PATH
+export PATH=/home/tylerheaton16/.local/bin:$PATH
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
